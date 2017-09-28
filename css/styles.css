@@ -3,6 +3,7 @@
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
+
 #musiLogo:hover {
     text-decoration: none;
 }
@@ -19,6 +20,11 @@
     width: 85%;
 }
 
+#thanksHead {
+    text-align: justify;
+    font-weight: bold;
+}
+
 .mainNavElem {
     padding-left: 2.5em;
     padding-right: 2.5em;
@@ -26,4 +32,12 @@
 
 .imgText {
     text-align: center;
+}
+
+.thanks {
+    font-family: 'Roboto', sans-serif;
+}
+
+.faq {
+    font-family: 'Roboto', sans-serif;
 }
