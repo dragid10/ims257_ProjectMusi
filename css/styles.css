@@ -5,7 +5,7 @@ footer {
 #musiLogo {
     font-size: 1.2em;
     font-weight: bold;
-    font-family: 'Lato', sans-serif;
+    font-family: "futura", sans-serif;
 }
 
 #musiLogo:hover {
@@ -17,7 +17,7 @@ footer {
 }
 
 #musicText {
-    font-family: 'Roboto', sans-serif;
+    font-family: "futura", sans-serif;
 }
 
 #musicPara {
@@ -39,13 +39,20 @@ footer {
 }
 
 .thanks {
-    font-family: 'Roboto', sans-serif;
+    font-family: "futura", sans-serif;
 }
 
 .faq {
-    font-family: 'Roboto', sans-serif;
+    font-family: "futura", sans-serif;
 }
 
-h2.caption {
+section {
+    display: block;
     font-family: "Futura";
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    list-style-image: url("img/home/music.jpg");
 }
