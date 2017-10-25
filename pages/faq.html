@@ -28,14 +28,14 @@
     <script>
     function toggle(){
         var h4 = this;
-        
+
         if(h4.getAttribute("class") == "plus"){
             h4.setAttribute("class","minus");
         }
-        
+
         else {h4.getAttribute("class","plus");}
-        
-        
+
+
         if (h4.nextElementSibling.getAttribute("class")=="closed"){
                 h4.nextElementSibling.setAttribute("class", "open");
             }
@@ -43,14 +43,14 @@
                 h4.nextElementSibling.setAttribute("class", "closed");
             }
             }
-        
+
          window.onload = function(){
             var h4Elements = document.getElementById("faqs").getElementsByTagName("h4");
             for (i = 0; i <  h4Elements.length; i++){
                 h4Elements[i].onclick = toggle;
             }
         }
-    
+
     </script>
     <!-- User-Defined Styles -->
     <link rel="stylesheet" href="../css/styles.css">
@@ -90,14 +90,14 @@
                 <p class="lead">A music genre is a conventional category that identifies some pieces of music as belonging to a shared tradition or set of conventions. It is to be distinguished from musical form and musical style, although
 in practice these terms are sometimes used interchangeably. A music genre is a classification system that places different instructional materials into neat categories that help teachers choose what to use and when.</p>
                     </div>
-                        
-                    
+
+
                 <h4 class="plus">2. What are the most popular music genres?
                 </h4>
                 <div class="closed">
                 <p>The most popular music genres are R&B hip hop, Pop, and Rock music. A few others such as country, EDM, and Latin music are also very popular.</p>
-                </div>  
-                
+                </div>
+
                 <h4 class="plus">3. Can a song be more than one genre?</h4>
                 <div class="closed">
                 <p> Yes, actually most music producers usually produce songs with more than one genres. For example, a track can be counted as Pop-dance which means it belongs to Pop and Dance genre.</p>
@@ -107,7 +107,7 @@ in practice these terms are sometimes used interchangeably. A music genre is a c
                 <p>There are about 800-1000 different music genres, and that number is growing all the time.
 Some are popular such as jazz or rock, and others are lesser known such as filthstep and skweee.
 Music genres keep growing because they can ʻremixʼ with other genres to create new ones, or just be a whole different genre altogether.</p></div>
-                  </section>      
+                  </section>
                 <hr>
         </div>
 
