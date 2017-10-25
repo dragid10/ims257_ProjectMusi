@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FAQ</title>
     <!-- Normalize.css -->
-    <link  rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></link>
+    <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></link>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
@@ -25,33 +25,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
 
-    <script>
-    function toggle(){
-        var h4 = this;
-
-        if(h4.getAttribute("class") == "plus"){
-            h4.setAttribute("class","minus");
-        }
-
-        else {h4.getAttribute("class","plus");}
-
-
-        if (h4.nextElementSibling.getAttribute("class")=="closed"){
-                h4.nextElementSibling.setAttribute("class", "open");
-            }
-            else {
-                h4.nextElementSibling.setAttribute("class", "closed");
-            }
-            }
-
-         window.onload = function(){
-            var h4Elements = document.getElementById("faqs").getElementsByTagName("h4");
-            for (i = 0; i <  h4Elements.length; i++){
-                h4Elements[i].onclick = toggle;
-            }
-        }
-
-    </script>
+        <script>
+    		function toggle() {
+    			var h2 = this;
+    			if (h2.getAttribute("class") == "plus") {
+    				h2.setAttribute("class", "minus");
+    			}
+    			else { h2.setAttribute("class", "plus"); }
+    			if (h2.nextElementSibling.getAttribute("class") == "closed") {
+    				h2.nextElementSibling.setAttribute("class", "open");
+    			}
+    			else { h2.nextElementSibling.setAttribute("class", "closed"); }
+    		}
+    		window.onload = function () {
+    			var h2Elements =
+    				document.getElementById("faqs").getElementsByTagName("h4");
+    			for (i = 0; i < h2Elements.length; i++) {
+    				h2Elements[i].onclick = toggle;
+    			}
+    		}
+    	</script>
     <!-- User-Defined Styles -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -85,8 +78,8 @@
                 <!-- Post Content -->
                 <section id="faqs">
                 <h2>FAQ</h2>
-                <div class="closed">
                 <h4 class="plus">1. What is a music genre?</h4>
+                <div class="closed">
                 <p class="lead">A music genre is a conventional category that identifies some pieces of music as belonging to a shared tradition or set of conventions. It is to be distinguished from musical form and musical style, although
 in practice these terms are sometimes used interchangeably. A music genre is a classification system that places different instructional materials into neat categories that help teachers choose what to use and when.</p>
                     </div>
@@ -100,9 +93,9 @@ in practice these terms are sometimes used interchangeably. A music genre is a c
 
                 <h4 class="plus">3. Can a song be more than one genre?</h4>
                 <div class="closed">
-                <p> Yes, actually most music producers usually produce songs with more than one genres. For example, a track can be counted as Pop-dance which means it belongs to Pop and Dance genre.</p>
-                <h4 class="plus">4. How many music genres are there?
-                </h4>
+                <p> Yes, actually most music producers usually produce songs with more than one genres. For example, a track can be counted as Pop-dance which means it belongs to Pop and Dance genre.</p></div>
+
+                <h4 class="plus">4. How many music genres are there?</h4>
                 <div class="closed">
                 <p>There are about 800-1000 different music genres, and that number is growing all the time.
 Some are popular such as jazz or rock, and others are lesser known such as filthstep and skweee.
