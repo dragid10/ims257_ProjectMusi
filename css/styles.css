@@ -47,9 +47,13 @@ footer {
 }
 
 section {
-    display: block;
+    display: inline;
     font-family: "Futura";
     text-align: center;
+}
+
+.homeThumb {
+    display: inline-block;
 }
 
 /*NEW CSS CODE*/
