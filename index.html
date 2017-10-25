@@ -8,7 +8,7 @@
     <title>Musi.Com</title>
 
     <!-- Normalize.css -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></script>
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></link>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
@@ -31,6 +31,27 @@
 
     <!-- Lato Font -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    
+    <script>
+        
+        window.onload = function () {
+            var imageLinks = document.getElementById("image_list").getElementsByTagName("a");
+            
+            for (i=0; i<imageLinks.length;i++) {
+                imageLinks[i].onclick =function (evt) {
+                    
+                document.getElementById("image").src = this.getAttribute("href");
+                    
+                document.getElementById("caption").firstChild.nodeValue = this.getAttribute("title");
+                
+                evt.preventDefault();
+                    
+                    
+                }
+            }
+        }
+	
+	</script>
 </head>
 
 <body>
@@ -68,24 +89,22 @@
                 <br>
                 <br>
                 <!-- Thumbnails -->
-                <div class="row text-center text-lg-left">
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <p class="imgText">Rap / Hip-Hop</p>
-                        <img class="img-fluid img-thumbnail" src="img/home/mainRap2.jpg" alt="">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <p class="imgText">Dubstep</p>
-                        <img class="img-fluid img-thumbnail" src="img/home/mainDubstep2.jpg" alt="">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <p class="imgText">House</p>
-                        <img class="img-fluid img-thumbnail" src="img/home/mainHouse2.jpg" alt="">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <p class="imgText">Jazz</p>
-                        <img class="img-fluid img-thumbnail" src="img/home/mainJazz2.jpg" alt="">
-                    </div>
-                </div>
+        
+        <section>   
+          <ul id="image_list">
+	        <li><a href="img/home/mainDubstep2.jpg"  title="Dubstep" id="first_link">
+	        	<img src="img/home/mainDubstep2.jpg" width =60px height=40px alt=""></a></li>
+	        <li><a href="img/home/mainRap2.jpg" title="Rap">
+	        	<img src="img/home/mainRap2.jpg" width =60px height=40px alt=""></a></li>
+	        <li><a href="img/home/mainHouse2.jpg" title="House">
+	        	<img src="img/home/mainHouse2.jpg" width =60px height=40px alt=""></a></li>
+	        <li><a href="img/home/mainJazz2.jpg" title="Jazz">
+	        	<img src="img/home/mainJazz2.jpg" width =60px height=40px alt=""></a></li>
+	    </ul>
+            
+	    <h2 id="caption">Genres</h2>         
+	    <p><img src="img/home/music.jpg" width =500px height=300px alt="" id="image"></p>
+            </section> 
                 <br>
                 <br>
             </div>
