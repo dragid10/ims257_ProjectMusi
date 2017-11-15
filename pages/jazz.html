@@ -27,6 +27,17 @@
 
     <!-- User-Defined Styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs({
+      event: "mouseover"
+    });
+  } );
+  </script>
 </head>
 
 <body id='rapPage'>
@@ -59,15 +70,25 @@
                 <img class="img-fluid img-responsive rounded" src="../img/jazz/Jas_Messengers01.JPG" alt="Jazz">
                 <hr>
                 <!-- Post Content -->
+                <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Intro</a></li>
+    <li><a href="#tabs-2">Genre</a></li>
+    <li><a href="#tabs-3">Artists</a></li>
+  </ul>
+                    <div id="tabs-1">
+                <h2 >Intro</2>
                 <p class="lead">Jazz is a music genre that originated in African American communities of New Orleans, United States,in the
                     late 19th and early 20th centuries, and developed from roots in blues and ragtime. Since the 1920s Jazz
                     Age, jazz has become recognized as a major form of musical expression. It then emerged in the form of
                     independent traditional and popular musical styles, all linked by the common bonds of African American
                     and European American musical parentage with a performance orientation. Jazz is characterized by swing
                     and blue notes, call and response vocals, polyrhythms and improvisation.</p>
+                    </div>
+                    
+                    <div id="tabs-2">
 
-
-                <h2>Genre</h2>
+                <h2 >Genre</h2>
                 <h4>Big Band Jazz</h4>
                 <p>Big Band refers to a jazz group of ten or more musicians, usually featuring at least three trumpets, two
                     or more trombones, four or more saxophones, and a "rhythm section" of accompanists playing some combination
@@ -82,8 +103,9 @@
                     Lewis, Les McCann and Eddie Harris, and Herbie Hancock mixed elements of Jazz, Soul, and R&B together
                     to create a whole new sound.
                 </p>
-
-                <h2>Artists</h2>
+                        </div>
+                    <div id="tabs-3">
+                <h2 >Artists</h2>
                 <h4>Louis Armstrong</h4>
                 <img class="img-fluid img-responsive rounded" src="../img/jazz/Louis_Armstrong_(1955).jpg" alt="Louis">
                 <p>Louis Daniel Armstrong (August 4, 1901– July 6, 1971), nicknamed Satchmo,[1] Satch or Pops, was an American
@@ -98,10 +120,14 @@
                     musician and singer-songwriter with a career spanning nearly thirty years. Nicknamed "Lady Day" by her
                     friend and music partner Lester Young, Holiday had a seminal influence on jazz music and pop singing.
                     Her vocal style, strongly inspired by jazz instrumentalists, pioneered a new way of manipulating phrasing
-                    and tempo.
-                    <br><br> <a href="https://www.allaboutjazz.com/">Learn more about jazz here!</a>
-                </p>
-
+                    and tempo.</p>
+                    <br><br> 
+                    </div>
+                </div>
+                    
+                    <a href="https://www.allaboutjazz.com/">Learn more about jazz here!</a>
+                
+                    
                 <hr>
             </div>
             <!-- Sidebar Widgets Column -->

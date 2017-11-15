@@ -22,10 +22,36 @@
         crossorigin="anonymous"></script>
 
     <!-- Compiled and minified Bootstrap Framework -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-
-        <script>
+    <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion" ).accordion({
+      icons: icons,
+        collapsible: true
+    });
+    $( "#toggle" ).button().on( "click", function() {
+      if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+        $( "#accordion" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion" ).accordion( "option", "icons", icons );
+      }
+    });
+  } );
+  </script>
+    
+    <style>
+    
+        #accoaccordion h3 {color: aquamarine;}
+    
+    </style>
+       <!-- <script>
     		function toggle() {
     			var h2 = this;
     			if (h2.getAttribute("class") == "plus") {
@@ -44,7 +70,7 @@
     				h2Elements[i].onclick = toggle;
     			}
     		}
-    	</script>
+    	</script> -->
     <!-- User-Defined Styles -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -78,6 +104,7 @@
                 <!-- Post Content -->
                 <section id="faqs">
                 <h2>FAQ</h2>
+                    <div id="accordion">
                 <h4 class="plus">1. What is a music genre?</h4>
                 <div class="closed">
                 <p class="lead">A music genre is a conventional category that identifies some pieces of music as belonging to a shared tradition or set of conventions. It is to be distinguished from musical form and musical style, although
@@ -102,6 +129,7 @@ Some are popular such as jazz or rock, and others are lesser known such as filth
 Music genres keep growing because they can ʻremixʼ with other genres to create new ones, or just be a whole different genre altogether.</p></div>
                   </section>
                 <hr>
+                    </div>
         </div>
 
     </div>
