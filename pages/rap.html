@@ -46,12 +46,12 @@
         var nextImage;
         var  timer = setInterval(
             function() {
-                $("#caption").fadeOut(1000);
-                $("#img_rapper").fadeOut(1000, function() {
+                $("#caption").fadeOut(2500);
+                $("#img_rapper").fadeOut(2500, function() {
                     imageCounter = (imageCounter + 1) % images.length;
                     nextImage = images[imageCounter];
-                    $("#img_rapper").attr("src", nextImage.src).fadeIn(1000);
-                    $("#caption").text(nextImage.title).fadeIn(1000);
+                    $("#img_rapper").attr("src", nextImage.src).fadeIn(1500);
+                    $("#caption").text(nextImage.title).fadeIn(1500);
                 });
             }, 2000);
         // var slide = function () {

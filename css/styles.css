@@ -43,7 +43,7 @@ footer {
 }
 
 .faq {
-    font-family: "futura", sans-serif;
+    font-family: "futura", sans-serif;image_list
 }
 
 section {
@@ -64,7 +64,7 @@ h2.plus {
 }
 h2.minus {
     background: url(images/minus.png) no-repeat left center;
-   background-position: 5%;
+    background-position: 5%;
 }
 div.closed {display: none;}
 div.open {display: block;}
@@ -78,4 +78,7 @@ div.open {display: block;}
 li {
     list-style: none;
     list-style-image: url("img/home/music.jpg");
+}
+#image_list li {
+    list-style-type: none;
 }
