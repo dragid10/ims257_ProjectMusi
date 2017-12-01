@@ -7,131 +7,172 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
     <!-- Normalize.css -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link href="styles.css" rel="stylesheet" type="text/css">       
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></script>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-    crossorigin="anonymous">
-
-    <!-- JQuery UI Css -->
-    <link href="css/smoothness/jquery-ui-1.8.23.custom.css" type="text/css" rel="stylesheet">
+        crossorigin="anonymous">
 
     <!-- Minified JQuery -->
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
 
     <!-- Minified Tether Lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <!-- Compiled and minified Bootstrap Framework -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <!-- User-Defined Styles -->
-    <link rel="stylesheet" href="../css/styles.css">
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $("#email").focus();
-        $("#contact").validate({
-            rules: {
-                name: {
-                    required: true
-                },
-                email: {
-                    required: true,
-                    email: true
-                }
-            }
-        });
-    });
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-    <!-- Nav Bar -->
+ <body>   <!-- Nav Bar -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="../index.html">Musi.Com</a>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link" href="dubstep.html">Dubstep</a>
-            <a class="nav-item nav-link" href="house.html">House</a>
-            <a class="nav-item nav-link" href="rap.html">Rap / Hip-Hop </a>
-            <a class="nav-item nav-link" href="jazz.html">Jazz</a>
-            <a class="nav-item nav-link active" href="contact.html">Contact Us<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="faq.html">FAQ</a>
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Musi.Com</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="dubstep.html">Dubstep</a>
+                <a class="nav-item nav-link" href="house.html">House</a>
+                <a class="nav-item nav-link" href="rap.html">Rap / Hip-Hop </a>
+                <a class="nav-item nav-link" href="jazz.html">Jazz</a>
+                <a class="nav-item nav-link active" href="contact.html">Contact Us<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="faq.html">FAQ</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Main Body -->
-<div class="container">
-    <form class="form-horizontal" id="contact">
-        <fieldset>
+    
+     <body>
+	<div data-role="page" id="home">
+    	<header data-role="header">
+        	<h1>Management</h1>
+    	</header>
+		
+       <!-- add the code for a split button list here -->        
+        <section data-role="content">
+			<div class="content-primary">
+                <p>Our awesome, radical, dope, totally tubular team:</p>
+				<ul data-role="listview" data-split-icon="star" data-inset="true" data-filter="true">
+                    <li data-role="list-divider">Team</li>
+        
+        
+					<li>
+                    	<a href="#">
+                    		<img src="../img/catty.jpg" alt="Julien">
+                    		<h3>Julien Griffith</h3>
+                    		<p>Dubstep <br> A girl who loves graphic design and producing music.</p>
+                    	</a>
+                    	<a href="#" data-rel="dialog" data-transition="pop" title="Contact Us">Contact Us</a>
+                	</li>
+                	<li>
+                    	<a href="#">
+                    		<img src="../img/owl.jpg" alt="Greg">
+                    		<h3>Greg Liposky</h3>
+                    		<p>House <br>A guy who loves to DJ and hang out with his friends.</p>
+                    	</a>
+                    	<a href="#" data-rel="dialog" data-transition="pop" title="Contact Us">Contact Us</a>
+                	</li>
+            
 
-            <!-- Form Name -->
-            <legend>Contact Us</legend>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="email">Email Address</label>
-                <div class="col-md-4">
-                    <input id="email" name="email" type="text" placeholder="clintonBill@bc.com" class="form-control input-md" required="">
-                    <span class="help-block"></span>
-                </div>
-            </div>
-
-            <!-- Textarea -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="generaltext">Type your message to send</label>
-                <div class="col-md-4">
-                    <textarea class="form-control" id="generaltext" name="generaltext">Text here</textarea>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="name">First and Last Name</label>
-                <div class="col-md-4">
-                    <input id="name" name="name" type="text" placeholder="bill clinton" class="form-control input-md" required="">
-                    <span class="help-block"></span>
-                </div>
-            </div>
-
-            <!-- File Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="attachment">Attachment</label>
-                <div class="col-md-4">
-                    <input id="attachment" name="attachment" class="input-file" type="file">
-                </div>
-            </div>
-
-            <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submitbutton"></label>
-                <div class="col-md-4">
-                    <button id="submitbutton" name="submitbutton" class="btn btn-primary" type="submit" formaction="thankyou.html">Submit</button>
-                </div>
-            </div>
-
-        </fieldset>
-    </form>
-</div>
-<footer class="footer">
+                	<li>
+                    	<a href="#">
+                    		<img src="../img/kitten.jpg" alt="Derek">
+                    		<h3>Derek Li</h3>
+                    		<p>Jazz <br>A chill dude who loves to listen to and share music.</p>
+                    	</a>
+                    	<a href="#" data-rel="dialog" data-transition="pop" title="Contact Us">Contact Us</a>
+                	</li>
+                    <li data-role="list-divider">Leader</li>
+                	<li>
+                    	<a href="#">
+                    		<img src="../img/ham.jpg" alt="Alex">
+                    		<h3>Alex Oladele</h3>
+                    		<p>Rap/Hip-Hop <br>A huge hip hop fan who carries our team on his back.</p>
+                    	</a>
+                    	<a href="#" data-rel="dialog" data-transition="pop" title="Contact Us">Contact Us</a>
+                	</li>
+            	</ul>
+			</div>
+    	</section>
+    
+    	<footer data-role="footer">
+        	<h4>&copy; 2017</h4>
+    	</footer>
+	</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         
+ <!-- Main Body -->
     <div class="container">
-        <span class="text">Team Mint Chocolate Chip</span>
+        <form class="form-horizontal">
+            <fieldset>
+                
+                <!-- Form Name -->
+                <legend>Contact Us</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Email Address</label>
+                    <div class="col-md-4">
+                        <input id="email" name="email" type="text" placeholder="clintonBill@bc.com" class="form-control input-md" required="">
+                        <span class="help-block">enter your email address plz</span>
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="generaltext">Type your message to send</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="generaltext" name="generaltext">Text here</textarea>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="name">First and Last Name</label>
+                    <div class="col-md-4">
+                        <input id="name" name="name" type="text" placeholder="bill clinton" class="form-control input-md" required="">
+                        <span class="help-block">Your first and last name.. pretty easy</span>
+                    </div>
+                </div>
+
+                <!-- File Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="attachment">Attachment</label>
+                    <div class="col-md-4">
+                        <input id="attachment" name="attachment" class="input-file" type="file">
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submitbutton"></label>
+                    <div class="col-md-4">
+                        <button id="submitbutton" name="submitbutton" class="btn btn-primary" type="submit" formaction="thankyou.html">Submit</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
     </div>
-</footer>
+    <footer class="footer">
+            <div class="container">
+                <span class="text">Team Mint Chocolate Chip</span>
+            </div>
+        </footer>
+     
+     
+     
 </body>
 
 </html>
