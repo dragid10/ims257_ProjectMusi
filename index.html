@@ -8,15 +8,17 @@
     <title>Musi.Com</title>
 
     <!-- Normalize.css -->
-    <link src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></link>
+    <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
 
     <!-- Minified JQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
     <!-- Minified Tether Lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
@@ -35,11 +37,24 @@
     <script>
     $(document).ready(function() {
         $("#image_list a").click(function(evt) {
-            $("#image").attr("src", $(this).attr("href"));
-            $("#caption").text($(this).attr("title"));
             evt.preventDefault();
+            var imgURL = $(this).attr("href");
+            $("#image").fadeOut(400, function() {
+                $("#image").attr("src", imgURL)
+                $("#caption").text($(this).attr("title"));
+            }).fadeIn(400);
         });
     });
+
+    $(".thumbs a").click(function(e) {
+    e.preventDefault();
+    $imgURL = $(this).attr("href");
+    $(".boat_listing .mainGallery")
+        .fadeOut(400, function() {
+            $(".boat_listing .mainGallery").attr('src',$imgURL);
+        })
+        .fadeIn(400);
+});
     </script>
 </head>
 
@@ -82,33 +97,32 @@
             <section>
                 <ul id="image_list">
                     <li class="homeThumb"><a href="img/home/mainDubstep2.jpg"  title="Dubstep" id="first_link">
-                        <img src="img/home/mainDubstep2.jpg" width =60px height=40px alt=""></a></li>
+                        <img src="img/home/mainDubstep2.jpg" width ="60px" height="40px" alt=""></a></li>
                         <li class="homeThumb"><a href="img/home/mainRap2.jpg" title="Rap">
-                            <img src="img/home/mainRap2.jpg" width =60px height=40px alt=""></a></li>
+                            <img src="img/home/mainRap2.jpg" width ="60px" height="40px" alt=""></a></li>
                             <li class="homeThumb"><a href="img/home/mainHouse2.jpg" title="House">
-                                <img src="img/home/mainHouse2.jpg" width =60px height=40px alt=""></a></li>
+                                <img src="img/home/mainHouse2.jpg" width ="60px" height="40px" alt=""></a></li>
                                 <li class="homeThumb"><a href="img/home/mainJazz2.jpg" title="Jazz">
-                                    <img src="img/home/mainJazz2.jpg" width =60px height=40px alt=""></a></li>
+                                    <img src="img/home/mainJazz2.jpg" width ="60px" height="40px" alt=""></a></li>
                                     <li class="homeThumb"><a href="img/home/mainClassical2.jpg" title="Classical">
-                                        <img src="img/home/mainClassical.jpeg" width =60px height=40px alt=""></a></li>
+                                        <img src="img/home/mainClassical.jpeg" width ="60px" height="40px" alt=""></a></li>
                                     </ul>
 
                                     <h2 id="caption">Genres</h2>
-                                    <p><img src="img/home/music.jpg" width =500px height=300px alt="" id="image"></p>
+                                    <p><img src="img/home/music.jpg" width ="500px" height="300px" alt="" id="image"></p>
                                 </section>
                                 <br>
                                 <br>
                             </div>
                             <!-- New Music Info -->
                             <div id="newMusicBox">
-                                <h3 id="musicText"><b>NEW MUSIC - Provider</b> by Frank Ocean</h3>
-                                <p id="musicPara">Provider, by Frank Ocean debuted on August 27th, 2017 after a two-month long hiatus from music<br><br>Frank
-                                    Ocean is an American singer and songwriter. Known for his idiosyncratic musical style<br><br> <a href="http://webpages.shepherd.edu/BREICH01/">Learn more about music history here!</a></p>
+                                <h3 id="musicText"><b>NEW MUSIC - Grow</b> by Lianne La Havas</h3>
+                                <p id="musicPara">Grow, by Lianne La Havas debuted on August 27th, 2015 after a year long hiatus from music<br><br>Lianne Las Havas is a British singer and songwriter. Known for her idiosyncratic musical style and smooth tones<br><br> <a href="http://webpages.shepherd.edu/BREICH01/">Learn more about music history here!</a></p>
                                 </div>
                                 <br>
                                 <!-- Spotify widget -->
                                 <div id="spotifyWidget">
-                                    <iframe src="https://open.spotify.com/embed?uri=spotify:user:dragid10:playlist:4DhNVjnmC5vYVcp2cGJdJz" width="300" height="380"
+                                    <iframe src="https://open.spotify.com/embed/user/dragid10/playlist/5k1fcdBitCmPT8TCs2lyMI" width="300" height="380"
                                     frameborder="0" allowtransparency="true"></iframe>
                                 </div>
 
