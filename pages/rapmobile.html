@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rap Music</title>
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+
+    <!-- Minified JQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <!-- Minified Tether Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified Bootstrap Framework -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+
+    <!-- JQuery Mobile -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+
+    <!-- User-Defined Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+    $(document).ready(function() {
+        // create an array of the slide images
+        var image, images = [];
+        $("#image_list a").each(function() {
+            image = new Image();
+            image.src = $(this).attr("href");
+            image.title = $(this).attr("title");
+            images.push(image);
+        });
+
+        // start slide show
+        var imageCounter = 0;
+        var nextImage;
+        var  timer = setInterval(
+            function() {
+                $("#caption").fadeOut(2500);
+                $("#img_rapper").fadeOut(2500, function() {
+                    imageCounter = (imageCounter + 1) % images.length;
+                    nextImage = images[imageCounter];
+                    $("#img_rapper").attr("src", nextImage.src).fadeIn(1500);
+                    $("#caption").text(nextImage.title).fadeIn(1500);
+                });
+            }, 2000);
+    })
+    </script>
+</head>
+
+<body id="rapPage">
+    <div data-role = "page">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Musi.Com</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="dubstep.html">Dubstep</a>
+                    <a class="nav-item nav-link" href="house.html">House</a>
+                    <a class="nav-item nav-link active" href="rap.html">Rap / Hip-Hop <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="jazz.html">Jazz</a>
+                    <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-item nav-link" href="faq.html">FAQ</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Body -->
+        <div data-role="content" class="container">
+            <div class="row">
+                <!-- Post Content Column -->
+                <div class="col-lg-8">
+                    <hr>
+                    <!-- Preview Image -->
+                    <img class="img-fluid img-responsive rounded" src="../img/rap/banner_hiphop.jpg" alt=""/>
+                    <hr>
+                    <!-- Post Content -->
+                    <p class="lead">Hip hop music, also called hip-hopor rap music, is a music genre developed in the United States by inner-city
+                    African Americans in the 1970s which consists of a stylized rhythmic music that commonly accompanies
+                    rapping, a rhythmic and rhyming speech that is chanted.</p>
+
+                    <p>It developed as part of hip hop culture, a subculture defined by four key stylistic elements: MCing/rapping,
+                    DJing/scratching with turntables, break dancing, and graffiti writing. Other elements include sampling
+                    beats or bass lines from records (or synthesized beats and sounds), and rhythmic beatboxing. While often
+                    used to refer solely to rapping, "hip hop" more properly denotes the practice of the entire subculture.The
+                    term hip hop music is sometimes used synonymously with the term rap music,though rapping is not a required
+                    component of hip hop music; the genre may also incorporate other elements of hip hop culture, including
+                    DJing, turntablism, scratching, beatboxing, and instrumental tracks.</p>
+
+                    <p>Hip hop as both a musical genre and a culture was formed during the 1970s when block parties became increasingly
+                    popular in New York City, particularly among African-American youth residing in the Bronx. At block parties
+                    DJs played percussive breaks of popular songs using two turntables and a DJ mixer to be able to play
+                    breaks from two copies of the same record, alternating from one to the other and extending the "break".
+                    Hip hop's early evolution occurred as sampling technology and drum machines became widely available and
+                    affordable. Turntablist techniques such as scratching and beatmatching developed along with the breaks
+                    and Jamaican toasting, a chanting vocal style, was used over the beats. Rapping developed as a vocal
+                    style in which the artist speaks or chants along rhythmically with an instrumental or synthesized beat.
+                    Notable artists at this time include DJ Kool Herc, Grandmaster Flash and The Furious Five, Fab Five Freddy,
+                    Marley Marl, Afrika Bambaataa, Kool Moe Dee, Kurtis Blow, Doug E. Fresh, Whodini, Warp 9, The Fat Boys,
+                    and Spoonie Gee. The Sugarhill Gang's 1979 song "Rapper's Delight" is widely regarded to be the first
+                    hip hop record to gain widespread popularity in the mainstream.The 1980s marked the diversification of
+                    hip hop as the genre developed more complex styles. Prior to the 1980s, hip hop music was largely confined
+                    within the United States. However, during the 1980s, it began to spread to music scenes in dozens of
+                    countries, many of which mixed hip hop with local styles to create new subgenres.<br><br> <a href="https://en.wikipedia.org/wiki/Hip_hop_music">Learn more about rap here!</a></p>
+                    <hr>
+                </div>
+                <!-- Sidebar Widgets Column -->
+                <div class="col-md-4">
+                    <ul id="image_list">
+                        <li hidden><a href="../img/rap/asaprocky.jpg" title="Asap Rocky" ></a></li>
+                        <li hidden><a href="../img/rap/chancetherapper.jpg" title="Chance The Rapper" ></a></li>
+                        <li hidden><a href="../img/rap/kendricklamar.jpg" title="Kendrick Lamar"></a></li>
+                        <li hidden><a href="../img/rap/lilWayne.jpg" title="Lil Wayne"></a></li>
+                        <li hidden><a href="../img/rap/wale.jpg" title="Wale"></a></li>
+                    </ul>
+                    <figure>
+                        <img id="img_rapper" class="img-fluid img-responsive" src="../img/rap/chancetherapper.jpg" alt=""/>
+                        <figcaption id="caption_chance">Notable Rappers</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+    <span class="text">Team Mint Chocolate Chip</span>
+    </div>
+    </footer>
+
+</body>
+</html>
