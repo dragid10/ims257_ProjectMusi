@@ -20,6 +20,11 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
+    <script
+    src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"
+    integrity="sha256-F0O1TmEa4I8N24nY0bya59eP6svWcshqX1uzwaWC4F4="
+    crossorigin="anonymous"></script>
+
     <!-- Minified Tether Lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
     crossorigin="anonymous"></script>
@@ -30,7 +35,6 @@
 
     <!-- JQuery Mobile -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
-
     <!-- User-Defined Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -62,11 +66,16 @@
     </script>
 </head>
 
-<body id="rapPage">
-    <div data-role = "page">
+<body>
+    <div data-role = "page" id="rapPage">
+        <!--header-->
+        <header data-role="header">
+            <h1>Rap</h1>
+        </header>
+
         <!-- Nav Bar -->
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button style = "cursor: pointer" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="../index.html">Musi.Com</a>
@@ -132,19 +141,17 @@
                     </ul>
                     <figure>
                         <img id="img_rapper" class="img-fluid img-responsive" src="../img/rap/chancetherapper.jpg" alt=""/>
-                        <figcaption id="caption_chance">Notable Rappers</figcaption>
+                        <!--<figcaption style = "text-align: center" id="caption_chance">Notable Rappers</figcaption>-->
                     </figure>
                 </div>
             </div>
 
         </div>
-    </div>
 
-    <footer class="footer">
-    <div class="container">
-    <span class="text">Team Mint Chocolate Chip</span>
+        <footer data-role = "footer" class="footer">
+                <h4>Team Mint Chocolate Chip</h4>
+        </footer>
     </div>
-    </footer>
 
 </body>
 </html>
